@@ -1,0 +1,11 @@
+#pictures and fonts
+img/*
+webfonts/*
+
+#bootstrao min framework
+css/bootstrap.min.css
+
+#bootstrap js 
+
+js/bootstrap.bundle.min.js
+js/jquery-3.3.1.min.js
