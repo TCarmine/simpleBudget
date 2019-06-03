@@ -15,25 +15,45 @@ class UI {
     this.itemList = [];
     this.itemID = 0;
   }
+  // submit budget method
+  submitBudgetForm(){
+    const valueInput = this.budgetInput.value;
+    if( valueInput === ""|| valueInput < 0){
+      this.budgetFeedback.classList.add("showItem");
+      this.budgetFeedback.innerHTML = `<p>Insert a non zero and positive value</p>`;
+      setTimeout(()=>{
+        this.budgetFeedback.classList.remove("showItem");
+      },1500);
+    }
+  }
+  
 }
+
+
 
 function eventListenters(){
+    
   const budgetForm = document.getElementById('budget-form');
-  const expenseForm = document.getElementById('expense-form');
-  const expenseList = document.getElementById('expense-list');
-
-}
+    const expenseForm = document.getElementById('expense-form');
+    const expenseList = document.getElementById('expense-list');
 
 // instance of UI class
+        const ui = new UI();
+        console.log(ui);
+        budgetForm.addEventListener('submit',(e)=>{
+          e.preventDefault();
+          ui.submitBudgetForm();
+        });
 
-const ui = new UI();
-console.log(ui);
+        expenseForm.addEventListener('submit',(e)=>{
+          e.preventDefault();
+        });
+        expenseList.addEventListener('click',()=>{
+        });
+}
 
-budgetForm.addEventListener('submit',(e)=>{
 
-})
-
-document.addEventListener('DOMContentLoaded', (e)=>{
+document.addEventListener('DOMContentLoaded', ()=>{
   eventListenters();
-})
+});
 
