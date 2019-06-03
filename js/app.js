@@ -52,8 +52,30 @@ function eventListenters(){
         });
 }
 
+<<<<<<< HEAD
 
 document.addEventListener('DOMContentLoaded', ()=>{
   eventListenters();
 });
+=======
+function eventListenters(){
+  const budgetForm = document.getElementById('budget-form');
+  const expenseForm = document.getElementById('expense-form');
+  const expenseList = document.getElementById('expense-list');
+
+}
+
+// instance of UI class
+
+const ui = new UI();
+console.log(ui);
+
+budgetForm.addEventListener('submit',(e)=>{
+
+})
+
+document.addEventListener('DOMContentLoaded', (e)=>{
+  eventListenters();
+})
+>>>>>>> 315eb316138247305a5374ddb406f5d402d6c326
 
